@@ -27,12 +27,12 @@ class ProjectInline(admin.TabularInline):
     extra = 0
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'sex', 'birthday')
+    list_display = ('name', 'sex', 'birthday', 'psw', 'real_name', 'phone')
     search_fields = ['name']      # 在 "name" 字段中查找项目 
     list_filter = ['birthday']    # 过滤器
     fieldsets = [                 # 设置编辑模块样式
         (None,               {'fields': ['name']}),
-        ('Information', {'fields': ['sex','birthday'], 'classes': ['wide']}),
+        ('Information', {'fields': ['real_name', 'phone', 'sex', 'birthday'], 'classes': ['wide']}),
     ]
     inlines = [ProjectInline,ModuleInline]     # 关联ModuleInline和ProjectInline行
 
