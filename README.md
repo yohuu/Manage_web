@@ -1,2 +1,2 @@
 # Manage_web
-毕设代码库
+develop 分支用于本地开发使用
